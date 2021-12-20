@@ -1,0 +1,13 @@
+﻿#index_body {
+    background-image: url("istockphoto-914370940-612x612.jpg") !important;
+    background-position: center !important;
+    background-size: 100% !important;
+    background-color: palegreen;
+    text-align: center !important;
+}
+
+.para {
+    border: solid;
+    border-color: red;
+    text-align: center;
+}

@@ -1,0 +1,103 @@
+﻿@model DisplayTimeslotVM
+@using TennisWebApp8.Data
+@using System.Collections.Generic
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a class="btn btn-primary"  asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h1 class="card-title">@Model.TotalTimeslots</h1>
+                <h5 class="card-text">Total Timeslots</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h1 class="card-title">@Model.TotalAvailable</h1>
+                <h5 class="card-text">Total Available Timeslots</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h1 class="card-title">@Model.TotalBooked</h1>
+                <h5 class="card-text">Booked Timeslots</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+
+@{
+    string day = null;
+    foreach (var item in Model.Timeslots)
+    {
+        if (item.Day == day)
+        { continue; }
+
+        day = item.Day;
+        <div>
+            <h2>
+                @Html.DisplayFor(modelItem => item.Day)
+            </h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Options
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model.Timeslots.Where(x => x.Day == item.Day))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => obj.Time)
+                            </td>
+                            <td>
+                                @if (obj.Booked == false)
+                                {
+                                    <span class="badge badge-success">Available</span>
+                                }
+                                @if (obj.Booked == true)
+                                {
+                                    <span class="badge badge-danger">Booked</span>
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-secondary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+            <br />
+
+        </div>
+
+    }
+}
