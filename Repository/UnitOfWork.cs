@@ -14,6 +14,7 @@ namespace TennisWebApp8.Repository
         private  IGenericRepositoryBase<Booking> _bookings;
         private  IGenericRepositoryBase<Timeslot> _timeslots;
         private  IGenericRepositoryBase<Dayslot> _dayslots;
+        private IGenericRepositoryBase<Interact> _interacts;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -27,6 +28,9 @@ namespace TennisWebApp8.Repository
 
         public IGenericRepositoryBase<Dayslot> Dayslots
             => _dayslots ??= new GenericRepository<Dayslot>(_context);
+
+        public IGenericRepositoryBase<Interact> Interacts
+            => _interacts ??= new GenericRepository<Interact>(_context);
 
         public void Dispose()
         {

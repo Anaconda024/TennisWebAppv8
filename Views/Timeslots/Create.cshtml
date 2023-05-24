@@ -4,40 +4,59 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>Timeslot</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Day" class="control-label"></label>
-                <input asp-for="Day" class="form-control" />
-                <span asp-validation-for="Day" class="text-danger"></span>
+<div class="booking-container1">
+    <div class="card card-4 ">
+        <div class="card-body">
+            <h4 class="title">Create Timeslot</h4>
+
+            <div class="row">
+                <div class="col-md-11">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>                        
+                        <div class="row ">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label asp-for="Day" class="label">Day</label>
+                                    <select asp-for="Day" class="rs-select2 greybackground col-md-12" id="DaysList" asp-items="@ViewBag.Days">
+                                        <option>Select Day</option>
+                                    </select>
+                                    <span asp-validation-for="Day" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group ">
+                                    <label asp-for="Time" class="label">Time</label>
+                                    <select asp-for="Time" class="rs-select2 greybackground col-md-12" >
+                                        <option>Select Time</option>
+                                    </select>
+                                    <span asp-validation-for="Time" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" asp-for="Booked" /> @Html.DisplayNameFor(model => model.Booked)
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Create" class="bluebutton" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Time" class="control-label"></label>
-                <input asp-for="Time" class="form-control" />
-                <span asp-validation-for="Time" class="text-danger"></span>
+
+            <div>
+                <a class="greenbutton" asp-action="TimeslotIndex">Back to List</a>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Booked" /> @Html.DisplayNameFor(model => model.Booked)
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="TimeslotIndex">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }

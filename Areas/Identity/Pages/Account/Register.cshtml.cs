@@ -90,7 +90,7 @@ namespace TennisWebApp8.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new AccountUser { UserName = Input.FirstName, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.Surname };
+                var user = new AccountUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.Surname };
                 user.DateJoined = DateTime.Now;
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)

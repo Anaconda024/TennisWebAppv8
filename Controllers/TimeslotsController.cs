@@ -62,6 +62,7 @@ namespace TennisWebApp8.Controllers
             // GET: Timeslots/Create
             public IActionResult Create()
         {
+            ViewBag.Days = new SelectList(_db.Dayslots, "DayId", "Day");
             return View();
         }
 

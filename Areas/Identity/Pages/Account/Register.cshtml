@@ -4,113 +4,115 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+<!--<h1>@ViewData["Title"]</h1>-->
 
 
-    <div class="hold-transition register-page">
-        <div class="register-box">
-            <div class="register-logo">
-                Create a New Account
-            </div>
+<div class="hold-transition register-page">
+    <div class="booking-container-logreg1">
 
-            <div class="card">
-                <div class="card-body register-card-body">
-                    <hr />
-                    <div asp-validation-summary="All" class="text-danger"></div>
-                    <form method="post">
-                        <div class="input-group mb-3">
-                            <input asp-for="Input.FirstName" class="form-control" placeholder="First name">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
-                        <div class="input-group mb-3">
-                            <input asp-for="Input.Surname" class="form-control" placeholder="Last name">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <span asp-validation-for="Input.Surname" class="text-danger"></span>
-                        <div class="input-group mb-3">
-                            <input asp-for="Input.Email" class="form-control" placeholder="Email">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <span asp-validation-for="Input.Email" class="text-danger"></span>
-                        <div class="input-group mb-3">
-                            <input asp-for="Input.Password" class="form-control" placeholder="Password">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <span asp-validation-for="Input.Password" class="text-danger"></span>
-                        <div class="input-group mb-3">
-                            <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Retype password">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Input.Role" class="control-label"></label>
-                            <br />
-                            <input type="radio" asp-for="Input.Role" value="ClientPlayer" />Player<br />
-                            <input type="radio" asp-for="Input.Role" value="Coach" />Coach<br />
-                            <span asp-validation-for="Input.Role" class="text-danger"></span>
-                        </div>
-                        <div class="row">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                            <!-- /.col -->
-                        </div>
-                    </form>
-                    <a asp-page="./Login" class="text-center">I already have an account</a>
+
+        <div class="card register-card1">
+            <div class="card-body register-card-body">
+                <h2 class="page-heading">Register</h2>
+                <hr />
+                <div class="register-logo">
+                    Create a New Account
                 </div>
-                <!-- /.form-box -->
-            </div><!-- /.card -->
-        </div>
-        <!-- /.register-box -->
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <form method="post">
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.FirstName" class="form-control" placeholder="First name">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.Surname" class="form-control" placeholder="Last name">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Input.Surname" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.Email" class="form-control" placeholder="Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.Password" class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Retype password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Role" class="control-label"></label>
+                        <br />
+                        <input type="radio" asp-for="Input.Role" value="ClientPlayer" />Player<br />
+                        <input type="radio" asp-for="Input.Role" value="Coach" />Coach<br />
+                        <span asp-validation-for="Input.Role" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="bluebutton">Register</button>
+                        <!-- /.col -->
+                    </div>
+                </form>
+                <a asp-page="./Login" class="text-center">I already have an account</a>
+            </div>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to register.</h4>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
+    <!-- /.register-box -->
+</div>
+<div class="col-md-6 col-md-offset-2">
+    <section>
+        <h4>Use another service to register.</h4>
+        <hr />
+        @{
+            if ((Model.ExternalLogins?.Count ?? 0) == 0)
+            {
+                <div>
+                    <p>
+                        There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                        for details on setting up this ASP.NET application to support logging in via external services.
+                    </p>
+                </div>
+            }
+            else
+            {
+                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
                     <div>
                         <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
+                            @foreach (var provider in Model.ExternalLogins)
+                            {
+                                <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                            }
                         </p>
                     </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
+                </form>
             }
-        </section>
-    </div>
+        }
+    </section>
+</div>
 
 
 @section Scripts {

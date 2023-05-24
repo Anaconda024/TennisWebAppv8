@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TennisWebApp8.Data
+@inject SignInManager<AccountUser> SignInManager
+@inject UserManager<AccountUser> UserManager
+
+
+
+<ul class="navbar-nav home-right-side">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a class="home-cta-btn anchor button" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+        </li>
+        <li class="nav-item">
+            <i class="fa fa-sign-out"></i>
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="home-cta-btn anchor button">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a type="button" class="home-cta-btn anchor button" asp-area="Identity" asp-page="/Account/Register">
+                Register
+            </a>
+        </li>
+        <li class="nav-item">
+            <a type="button" class="home-cta-btn1 anchor button" asp-area="Identity" asp-page="/Account/Login">
+                LOGIN
+            </a>
+        </li>
+
+    }
+</ul>
