@@ -4,84 +4,108 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Booking</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Day" class="control-label"></label>
-                <select asp-for="Day" class="select col-md-12" id="DaysList" asp-items="@ViewBag.Days">
-                    <option>Select Day</option>
-                </select>
-                <span asp-validation-for="Day" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Time" class="control-label"></label>
-                <select asp-for="Time" class="select col-md-12" id="TimesList">
-                    <option>Select Time</option>
-                </select>
-                <span asp-validation-for="Time" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Length" class="control-label"></label>
-                <select asp-for="Length" class="select col-md-12">
-                    <option value="@Html.DisplayText(Model.Day)">@Html.DisplayText(Model.Day)</option>
-                    <option value="30">30 min</option>
-                    <option value="60">1hr</option>
-                </select>
-                <span asp-validation-for="Length" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Location" class="control-label"></label>
-                <select asp-for="Location" class="select col-md-12">
-                    <option value="@Html.DisplayText(Model.Location)">@Html.DisplayText(Model.Location)</option>
-                    <option value="Ferndale Tennis Club">Ferndale Tennis Club</option>
-                    <option value="Randburg Tennis Club">Randburg Tennis Club</option>
-                </select>
-                <span asp-validation-for="Location" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Duration" class="control-label"></label>
-                <select asp-for="Duration" class="select col-md-12">
-                    <option value="4">4 lessons</option>
-                    <option value="8">8 lessons</option>
-                    <option value="12">12 lessons</option>
-                </select>
-                <span asp-validation-for="Duration" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Coach" class="control-label"></label>
-                <select asp-for="CoachId" class="select col-md-12" id="DaysList" asp-items="@ViewBag.Coachs">
-                    <option>Select Coach</option>
-                </select>
-                <span asp-validation-for="Coach" class="text-danger"></span>
-            </div>
-
-
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="booking-container1">
+    <div class="card card-4 ">
+        <div class="card-body">
+            <h4 class="title">Edit Booking</h4>
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class=" input-group">
+                            <label class="label">First Name</label>
+                            <input asp-for="FirstName" class=" input--style-4" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class=" input-group">
+                            <label class="label">LastName</label>
+                            <input asp-for="LastName" class="input--style-4" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class="input-group">
+                            <label asp-for="Day" class="label">Day</label>
+                            <select asp-for="Day" class="rs-select2 greybackground col-md-12" id="DaysList" asp-items="@ViewBag.Days">
+                                <option>@Html.DisplayFor(modelItem => Model.Day);</option>
+                            </select>
+                            <span asp-validation-for="Day" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group ">
+                            <label asp-for="Time" class="label">Time</label>
+                            <select asp-for="Time" class="rs-select2 greybackground col-md-12" id="TimesList">
+                                <option>@Html.DisplayFor(modelItem => Model.Time)</option>
+                            </select>
+                            <span asp-validation-for="Time" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class="input-group">
+                            <label asp-for="Length" class="label">Length</label>
+                            <br />
+                            <select asp-for="Length" class="rs-select2 greybackground col-md-12">
+                                <option>@Html.DisplayFor(modelItem => Model.Length)</option>
+                                <option value="30">30 min</option>
+                                <option value="60">1hr</option>
+                            </select>
+                            <span asp-validation-for="Length" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <label asp-for="Location" class="label">Location</label>
+                            <select asp-for="Location" class="rs-select2 greybackground col-md-12">
+                                <option>@Html.DisplayFor(modelItem => Model.Location)</option>
+                                <option value="Ferndale Tennis Club">Ferndale Tennis Club</option>
+                                <option value="Randburg Tennis Club">Randburg Tennis Club</option>
+                            </select>
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Duration" class="label">Duration</label>
+                            <select asp-for="Duration" class="rs-select2 greybackground col-md-12">
+                                <option>@Html.DisplayFor(modelItem => Model.Duration)</option>
+                                <option value="4">4 lessons</option>
+                                <option value="8">8 lessons</option>
+                                <option value="12">12 lessons</option>
+                            </select>
+                            <span asp-validation-for="Duration" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Coach" class="label">Coach</label>
+                            <select asp-for="CoachId" class="rs-select2 greybackground col-md-11" id="DaysList" asp-items="@ViewBag.Coachs">
+                                <option>@Html.DisplayFor(modelItem => Model.Coach)</option>
+                            </select>
+                            <span asp-validation-for="CoachId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="bluebutton" />
+                    </div>
+                    <div>
+                        <a class="greenbutton">Back to List</a>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="BookingIndex">Back to List</a>
 </div>
 
 @section Scripts{

@@ -1,0 +1,354 @@
+/* ==========================================================================
+   booking table
+   ========================================================================== */
+
+.booking-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.booking-container1 {
+    width: 100%;
+    height: 1006px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;    
+    border-style: dashed;
+    border-width: 0px;    
+}
+
+.booking-container2 {
+    top: 3%;
+    left: 15%;
+    width: 80%;
+    padding: 57px 40px;
+    padding-bottom: 65px;
+    min-height: 500px;
+    height: auto;
+    margin: auto;
+    display: block;
+    position: absolute;
+    align-items: flex-start;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: dashed;
+    border-width: 0pc;
+    border-radius: 24px;
+    background: #fff;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15)
+}
+
+.booking-container4 {
+    top: 20px;
+    left: 2%;
+    width: 95%;
+    padding: 57px 40px;
+    padding-bottom: 65px;
+    min-height: 500px;
+    height: auto;
+    margin: auto;
+    display: block;
+    position: absolute;
+    align-items: flex-start;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: dashed;
+    border-width: 0pc;
+    border-radius: 24px;
+    background: #fff;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15)
+}
+
+.booking-container3 {
+    width: 100%;
+    min-height: 8500px;
+    max-height: auto;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border-style: dashed;
+    border-width: 0px;
+
+}
+
+.booking-container-logreg {
+    width: 100%;
+    min-height: 700px;
+    max-height: auto;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border-style: dashed;
+    border-width: 0px;
+}
+
+.booking-container-logreg1 {
+    width: 100%;
+    min-height: 1250px;
+    max-height: auto;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border-style: dashed;
+    border-width: 0px;
+}
+
+.details-container {
+    top: 136px;
+    left: 25%;
+    width: 50%;
+    padding: 57px 40px;
+    padding-bottom: 65px;
+    min-height: 500px;
+    height: auto;
+    margin: auto;
+    display: block;
+    position: absolute;
+    align-items: flex-start;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: dashed;
+    border-width: 0pc;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+
+.page-heading {
+    text-align: center;
+    top: 40px;
+}
+
+.page-button {
+    height: 45px;
+    width: 150px;
+    display: block;
+    text-align: : center;
+    top: 25px;
+    left: 20px;
+    position: relative;
+}
+
+.page-table {
+    display: block;
+    top: 5px;
+    left: 20px;
+    position: relative;
+    width: 90%;
+}
+
+/* ==========================================================================
+   #Forms
+   ========================================================================== */
+
+
+.card {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+    top: 136px;
+    left: 15%;
+    width: 60%;
+}
+
+.card-timeslot {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+    top: 0px;
+    margin-right: 20rem;
+    width: 60%;
+}
+
+.card-4 {
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-4 .card-body {
+    padding: 57px 65px;
+    padding-bottom: 65px;
+}
+
+.login-card1 {
+    width: 35%;
+    top: 250px;
+    left: 30%;
+}
+
+.register-card1 {
+    width: 40%;
+    left: 30%;
+    top: 250px;
+}
+
+.title {
+    font-size: 24px;
+    color: #525252;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.bluebutton {
+    background: #4272d7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 50px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    border: none;
+    shadow: none;
+    margin-right: 20px;
+}
+
+.bluebutton {
+    background: #4272d7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 50px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    border: none;
+    shadow: none;
+    margin-left: 20px;
+}
+
+.greenbutton {
+    background: #57b846;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 50px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.label {
+    font-size: 16px;
+    color: #555;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input--style-4 {
+    line-height: 40px;
+    background: #fafafa;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border: none;
+    width: inherit;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row-space {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.col-2 {
+    width: -webkit-calc((100% - 30px) / 2);
+    width: -moz-calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+}
+
+.col-6 {
+    width: -webkit-calc((100% - 30px) / 2);
+    width: -moz-calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+}
+
+.rs-select2 {
+    width: 100% !important;
+    outline: none;
+    background: #fafafa;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 50px;
+    background: transparent;
+}
+
+.greybackground {
+    background: #fafafa;
+}
+
+@media (max-width: 767px) {
+    .card-4 .card-body {
+        padding: 50px 40px;
+    }
+}

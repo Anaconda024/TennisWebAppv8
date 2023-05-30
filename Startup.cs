@@ -46,8 +46,8 @@ namespace TennisWebApp8
             services.AddDefaultIdentity<AccountUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            
-            services.AddControllersWithViews();
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation(); ;
             services.AddRazorPages();
         }
 

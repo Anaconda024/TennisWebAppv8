@@ -16,5 +16,6 @@ namespace TennisWebApp8.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Timeslot> Timeslots { get; set; }
         public DbSet<Dayslot> Dayslots { get; set; }
+        public DbSet<Interact> Interacts { get; set; }
     }
 }

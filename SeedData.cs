@@ -22,7 +22,7 @@ namespace TennisWebApp8
             {
                 var user = new AccountUser
                 {
-                    UserName = "admin",
+                    UserName = "admin@localhost.com",
                     Email = "admin@localhost.com",
                     FirstName = "admin"
                 };

@@ -16,7 +16,7 @@ namespace TennisWebApp8.Mappings
             CreateMap<Timeslot, TimeslotVM>().ReverseMap();
             CreateMap<Timeslot, DisplayTimeslotVM>().ReverseMap();
             CreateMap<AccountUser, AccountUserVM>().ReverseMap();
-
+            CreateMap<Interact, InteractVM>().ReverseMap();
         }
     }
 }

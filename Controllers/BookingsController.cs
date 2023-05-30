@@ -99,6 +99,7 @@ namespace TennisWebApp8.Controllers
                     model.AccountId = player.Id;
                 }
 
+
                 //var coach = _db.Users.Where(q => q.Id == model.CoachId);
                 var coach = _userManager.FindByIdAsync(model.CoachId).Result;
                 model.Coach = coach.UserName;
@@ -218,6 +219,7 @@ namespace TennisWebApp8.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
+        
         {
             
             try

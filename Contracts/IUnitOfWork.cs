@@ -11,6 +11,7 @@ namespace TennisWebApp8.Contracts
         IGenericRepositoryBase<Booking> Bookings { get; }
         IGenericRepositoryBase<Timeslot> Timeslots { get; }
         IGenericRepositoryBase<Dayslot> Dayslots { get; }
+        IGenericRepositoryBase<Interact> Interacts { get; }
         Task Save();
     }
 }
